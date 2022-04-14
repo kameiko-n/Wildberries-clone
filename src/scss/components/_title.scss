@@ -1,0 +1,7 @@
+.title {
+    height: 80px;
+    padding-left: 150px;
+    @include flex(row, left, center, nowrap);
+    @include font($medium, $xl, $xl);
+    color: $black-color;
+}
