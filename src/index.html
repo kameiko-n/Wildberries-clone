@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/index.scss">
+    <title>Wildberries-clone</title>
+</head>
+<body>
+    <div id="root">
+        <div class="wrapper">
+            <header class="header">
+               <a href="/" class="logo">
+                    <img class="logo__img" src="assets/logo.svg" alt="Logo">
+                    <p class="logo__name">Our Shop</p>
+                </a>
+                <input class="header__input" type="search"></input>
+                <button class="header__button">Корзина</button>
+                <div class="header__basket"></div>
+            </header>
+            <main class="main">
+                <div class="slider"></div>
+                <h2 class="title">Хиты продаж</h2>
+                <div class="products">
+                    <div class="card">
+                        <div class="card__content">
+                            <img src="./assets/card/pants.jpg" alt="Фото товара" class="card__photo">
+                            <a href="#popup" class="card__fast-view">Быстрый просмотр</a>
+                            <div class="card__bottom">
+                                <p class="card__sale-value">10%</p>
+                                <button class="card__add-in-basket-btn">
+                                    <img src="./assets/card/card__add-in-basket.svg" alt="Добавить в корзину" class="card__basket-btn-img">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card__prices">
+                            <p class="card__new-price">900р</p>
+                            <p class="card__old-price">1000р</p>
+                        </div>
+                        <h3 class="card__title">Штаны</h3>
+                        <div id="popup" class="card__popup">
+                            <div class="card__popup-body">
+                                <img src="./assets/card/pants.jpg" alt="Фото товара" class="card__popup-photo">
+                                <a href="/" class="card__popup-close">
+                                    <img class="card__popup-close" src="./assets/card/close-icon.svg" alt="Закрыть">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <h1 class="footer__title">Dev Dream Team: Анастасия, Андрей, Евгений, Елена, Наталья, Никита.</h1>
+            </footer>
+        </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>

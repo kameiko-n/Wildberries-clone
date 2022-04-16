@@ -1,0 +1,41 @@
+.header {
+    height: 160px;
+    padding: 40px 0;
+
+    @include flex (row, space-between, center, nowrap);
+
+    &__input {
+        width: 900px;
+        height: 80px;
+        margin: 0 10px;
+
+        border: 2px solid $black-color;
+        border-radius: 25px;
+    }
+    
+    &__button {
+        width: 200px;
+        height: 80px;
+
+        @include font($bold, $xl, $xl);
+        color: $black-color;
+    }
+
+    &__basket {
+        display: none;
+    }
+}
+.logo {
+    max-width: 270px;
+    @include flex (row, space-between, center, nowrap);
+
+    &__img {
+        width: 80px;
+        margin-right: 10px;
+    }
+
+    &__name {
+        @include font($bold, $xxl, $xl);
+        color: $black-color;
+    }
+}
