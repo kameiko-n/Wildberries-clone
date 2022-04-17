@@ -27,12 +27,35 @@
                 <h2 class="title">Хиты продаж</h2>
                 <div class="products">
                     <div class="card">
+
+                        <div class="card__content">
+                            <img src="./assets/card/pants.jpg" alt="Фото товара" class="card__photo">
+                            <a href="#popup" class="card__fast-view">Быстрый просмотр</a>
+                            <div class="card__bottom">
+                                <p class="card__sale-value">10%</p>
+                                <button class="card__add-in-basket-btn">
+                                    <img src="./assets/card/card__add-in-basket.svg" alt="Добавить в корзину" class="card__basket-btn-img">
+                                </button>
+                            </div>
+                        </div>
+
                         <div class="card__menu"></div>
+
                         <div class="card__prices">
                             <p class="card__new-price">900р</p>
                             <p class="card__old-price">1000р</p>
                         </div>
                         <h3 class="card__title">Штаны</h3>
+
+                        <div id="popup" class="card__popup">
+                            <div class="card__popup-body">
+                                <img src="./assets/card/pants.jpg" alt="Фото товара" class="card__popup-photo">
+                                <a href="/" class="card__popup-close">
+                                    <img class="card__popup-close" src="./assets/card/close-icon.svg" alt="Закрыть">
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </main>
