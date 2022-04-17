@@ -2,7 +2,6 @@
     width: 300px;
     height: 520px;
     padding: 20px;
-
     background: #f8f8fa;
     border-radius: 25px;
     z-index: 1;
@@ -102,6 +101,14 @@
 
     &__basket-btn-img{
         width: 50px;
+      
+    @include flex(column, space-between, left, nowrap);
+
+    &__menu {
+        height: 400px;
+        border: 2px solid $black-color;
+        border-radius: 25px;
+        background-color: rgb(215, 229, 250);
     }
 
     &__prices {
