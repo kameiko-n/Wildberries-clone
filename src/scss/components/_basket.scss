@@ -1,0 +1,46 @@
+.basket {
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  display: none;
+  width: 100%;
+  padding: 15px 35px;
+  background-color: #F9FAF0;
+  border-radius: 25px;
+  border: 2px solid #000;
+  &--show {
+    display: block;
+  }
+  &__header {
+    @include flex (row, space-between, null, null);
+    margin-bottom: 30px;
+  }
+  &__title {
+    @include font ($bold, $lg, 1);
+    font-size: 24px;
+    color: #000;
+  }
+  &__button {
+    min-width: 30px;
+    padding: 10px 10px;
+    @include font ($medium, $sm, 1);
+    color: #000;
+    background-color: #C779EB;
+    border-radius: 15px;
+    border: 2px solid #000;
+  }
+  &__list {
+    margin-bottom: 35px;
+  }
+  &__item {
+    @include flex (row, space-between, null, null);
+    margin-bottom: 10px;
+    padding: 0px 80px 0px 50px;
+    @include font ($medium, $sm, 1.5);
+  }
+  &__total {
+    display: flex;
+    justify-content: end;
+    @include font ($medium, $lg, 1);
+  }
+}

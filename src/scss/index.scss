@@ -1,13 +1,16 @@
 /* CONFIG */
+
 @import "./config/reset";
 @import "./config/variables";
 @import "./config/base";
 @import "./config/mixins";
 
 /* COMPONENTS */
+
 @import "./components/_header";
 @import "./components/_slider";
 @import "./components/_title";
 @import "./components/_products";
 @import "./components/_card";
 @import "./components/_footer";
+@import "./components/basket";
