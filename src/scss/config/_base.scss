@@ -1,5 +1,6 @@
 body {
     font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to right,#cb11ab 0,#481173 100%);
 }
 
 .wrapper {
@@ -7,5 +8,12 @@ body {
     padding: 0 10px;
     max-width: 1440px;
     height: 100vh;
+    background: linear-gradient(to right, #bb11a4 0, #59117a 100%);
+}
+
+.main {
+    margin: 2px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.55);
 }
 
