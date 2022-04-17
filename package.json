@@ -1,0 +1,23 @@
+{
+  "name": "wildberries-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kameiko-n/Wildberries-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kameiko-n/Wildberries-clone/issues"
+  },
+  "homepage": "https://github.com/kameiko-n/Wildberries-clone#readme",
+  "devDependencies": {
+    "sass": "^1.50.0"
+  }
+}
