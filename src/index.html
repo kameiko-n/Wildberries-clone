@@ -13,30 +13,29 @@
 </head>
 
 <body>
-    <div id="root">
-        <div class="wrapper">
-            <header class="header">
-               <a href="/" class="logo">
-                    <img class="logo__img" src="assets/logo.svg" alt="Logo">
-                    <p class="logo__name">Our Shop</p>
-                </a>
-                <div class="header__search-box">
-                    <input class="header__search-text" type="text" placeholder="Я ищу...">
-                    <button class="header__search-btn">
+  <div id="root">
+    <div class="wrapper">
+      <header class="header">
+        <a href="/" class="logo">
+          <img class="logo__img" src="assets/logo.svg" alt="Logo">
+          <p class="logo__name">Our Shop</p>
+        </a>
+        <div class="header__search-box">
+          <input class="header__search-text" type="text" placeholder="Я ищу...">
+          <button class="header__search-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#e8e8e8b5" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                         </svg>
                     </button>
-                </div>
-                <button class="header__search-sm-btn">
+        </div>
+        <button class="header__search-sm-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#e8e8e8b5" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                 </button>
-                <button class="header__button">Корзина</button>
-                <div class="header__basket">
-                  <p class="basket__title">Корзина</p>
-                  <button class="basket__button">Очистить корзину</button>
-                </div>
-            <ul class="basket__list">
+        <button class="header__button">Корзина</button>
+        <div class="basket">
+          <p class="basket__title">Корзина</p>
+          <button class="basket__button">Очистить корзину</button>
+          <ul class="basket__list">
             <li class="basket__item">
               <p class="basket__item-name">Название товара: </p>
               <p class="basket__item-cost">Стоимость: </p>
@@ -45,75 +44,76 @@
               <p class="basket__item-name">Название товара: </p>
               <p class="basket__item-cost">Стоимость: </p>
             </li>
-            </ul>
-            <p class="basket__total">Итого </p>
-          
-            </header>
-            <main class="main">
-                <div class="flex-wrapper">
-                    <div class="slider-wrapper">
-                        <div class="slide active">
-                            <a href="#"><img src="/assets/slider_img/big_prices.jpg" alt="big_prices"></a>
-                        </div>
-                        <div class="slide">
-                            <a href="#"><img src="/assets/slider_img/antilopa.jpg" alt="antilopa"></a>
-                        </div>
-                        <div class="slide">
-                            <a href="#"><img src="/assets/slider_img/big_spring.jpg" alt="big_spring"></a>
-                        </div>
-                        <div class="slide">
-                            <a href="#"><img src="/assets/slider_img/meine_liebe.png" alt="meine_liebe"></a>
-                        </div>                           
-                        <button class="slider__btn-left"><img class="arrow_left" src="/assets/slider_img/left_arrow_icon.svg"></button>
-                        <button class="slider__btn-right"><img class="arrow_left" src="/assets/slider_img/right_arrow_icon.svg"></button>
-                    </div>
-                </div>
-                <div class="container__dots">
-                    <button class="slired__dot active"></button>
-                    <button class="slired__dot"></button>
-                    <button class="slired__dot"></button>
-                    <button class="slired__dot"></button>
-                </div>
-                <h2 class="title">Хиты продаж</h2>
-                <div class="products">
-                    <div class="card">
+          </ul>
+          <p class="basket__total">Итого </p>
+        </div>
 
-                        <div class="card__content">
-                            <img src="./assets/card/pants.jpg" alt="Фото товара" class="card__photo">
-                            <a href="#popup" class="card__fast-view">Быстрый просмотр</a>
-                            <div class="card__bottom">
-                                <p class="card__sale-value">10%</p>
-                                <button class="card__add-in-basket-btn">
+      </header>
+      <main class="main">
+        <div class="flex-wrapper">
+          <div class="slider-wrapper">
+            <div class="slide active">
+              <a href="#"><img src="/assets/slider_img/big_prices.jpg" alt="big_prices"></a>
+            </div>
+            <div class="slide">
+              <a href="#"><img src="/assets/slider_img/antilopa.jpg" alt="antilopa"></a>
+            </div>
+            <div class="slide">
+              <a href="#"><img src="/assets/slider_img/big_spring.jpg" alt="big_spring"></a>
+            </div>
+            <div class="slide">
+              <a href="#"><img src="/assets/slider_img/meine_liebe.png" alt="meine_liebe"></a>
+            </div>
+            <button class="slider__btn-left"><img class="arrow_left" src="/assets/slider_img/left_arrow_icon.svg"></button>
+            <button class="slider__btn-right"><img class="arrow_left" src="/assets/slider_img/right_arrow_icon.svg"></button>
+          </div>
+        </div>
+        <div class="container__dots">
+          <button class="slired__dot active"></button>
+          <button class="slired__dot"></button>
+          <button class="slired__dot"></button>
+          <button class="slired__dot"></button>
+        </div>
+        <h2 class="title">Хиты продаж</h2>
+        <div class="products">
+          <div class="card">
+
+            <div class="card__content">
+              <img src="./assets/card/pants.jpg" alt="Фото товара" class="card__photo">
+              <a href="#popup" class="card__fast-view">Быстрый просмотр</a>
+              <div class="card__bottom">
+                <p class="card__sale-value">10%</p>
+                <button class="card__add-in-basket-btn">
                                     <img src="./assets/card/card__add-in-basket.svg" alt="Добавить в корзину" class="card__basket-btn-img">
                                 </button>
-                            </div>
-                        </div>
+              </div>
+            </div>
 
-                        <div class="card__prices">
-                            <p class="card__new-price">900р</p>
-                            <p class="card__old-price">1000р</p>
-                        </div>
-                        <h3 class="card__title">Штаны</h3>
+            <div class="card__prices">
+              <p class="card__new-price">900р</p>
+              <p class="card__old-price">1000р</p>
+            </div>
+            <h3 class="card__title">Штаны</h3>
 
-                        <div id="popup" class="card__popup">
-                            <div class="card__popup-body">
-                                <img src="./assets/card/pants.jpg" alt="Фото товара" class="card__popup-photo">
-                                <a href="/" class="card__popup-close">
-                                    <img class="card__popup-close" src="./assets/card/close-icon.svg" alt="Закрыть">
-                                </a>
-                            </div>
-                        </div>
+            <div id="popup" class="card__popup">
+              <div class="card__popup-body">
+                <img src="./assets/card/pants.jpg" alt="Фото товара" class="card__popup-photo">
+                <a href="/" class="card__popup-close">
+                  <img class="card__popup-close" src="./assets/card/close-icon.svg" alt="Закрыть">
+                </a>
+              </div>
+            </div>
 
-                    </div>
-                </div>
-            </main>
-      
-            <footer class="footer">
-                <h1 class="footer__title">Dev Dream Team: Анастасия, Андрей, Евгений, Елена, Наталья, Никита.</h1>
-            </footer>
-       
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/slider.js"></script>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <h1 class="footer__title">Dev Dream Team: Анастасия, Андрей, Евгений, Елена, Наталья, Никита.</h1>
+      </footer>
+
+      <script src="./scripts/index.js"></script>
+      <script src="./scripts/slider.js"></script>
 </body>
 
 </html>
