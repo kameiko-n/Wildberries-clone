@@ -104,13 +104,6 @@
       
     @include flex(column, space-between, left, nowrap);
     }
-    
-    &__menu {
-        height: 400px;
-        border: 2px solid $black-color;
-        border-radius: 25px;
-        background-color: rgb(215, 229, 250);
-    }
 
     &__prices {
         padding: 0 10px;
@@ -193,4 +186,4 @@
             top: 30px;
         }
     }
-}}
+}
