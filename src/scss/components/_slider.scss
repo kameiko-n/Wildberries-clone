@@ -1,7 +1,137 @@
-.slider {
-    height: 500px;
-    margin: 40px 0;
+.flex-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content:center;
+
+    // @include xl ($screen-lg-min) {
+    //     width: 80%;
+    // }
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    height: 370px;
+    margin: 40px 0 10px;
+    border: 1px solid $black-color;
+    border-radius: 12px;
+    transition: all ease 1s;
+    overflow: hidden;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+// .slider__show {
+//     position: relative;
+//     left: 0;
+//     display: flex;
+//     height: 370px;
+//     width: 5750px;
+//     transition: all ease 1s;
+// }
+
+.slider__btn-left {
+    position: absolute;
+    left: 30px;
+    top: 155px;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(240, 248, 255, 0.829);
+    opacity: 0.33;
+    border: none;
+}
+
+.slider__btn-left:hover {
+    position: absolute;
+    left: 30px;
+    top: 155px;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 1;
+    border: none;
+}
+
+.slider__btn-right {
+    position: absolute;
+    right: 30px;
+    top: 155px;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(240, 248, 255, 0.829);
+    opacity: 0.33;
+    border: none;
     
-    border: 2px solid $black-color;
-    border-radius: 50px;
+}
+.slider__btn-right:hover {
+    position: absolute;
+    right: 30px;
+    top: 155px;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 1;
+    border: none;
+
+}
+.arrow_left {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.arrow_right {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: rgba(240, 248, 255, 0.829);
+    opacity: 0.33;
+    border: none;
+}
+
+.container__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slired__dot {
+    width: 15px;
+    height: 15px;
+    margin: 5px 15px;
+    background-color: rgb(228 133 213);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slired__dot.active {
+    width: 25px;
+    height: 25px;
+    background-color: #9e238f;
 }
