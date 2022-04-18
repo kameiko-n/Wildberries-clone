@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./scss/index.scss">
-    <title>Wildberries-clone</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./scss/index.scss">
+  <title>Wildberries-clone</title>
 </head>
+
 <body>
     <div id="root">
         <div class="wrapper">
@@ -20,7 +22,22 @@
                 </a>
                 <input class="header__input" type="search"></input>
                 <button class="header__button">Корзина</button>
-                <div class="header__basket"></div>
+                <div class="header__basket">
+                  <p class="basket__title">Корзина</p>
+                  <button class="basket__button">Очистить корзину</button>
+                </div>
+            <ul class="basket__list">
+            <li class="basket__item">
+              <p class="basket__item-name">Название товара: </p>
+              <p class="basket__item-cost">Стоимость: </p>
+            </li>
+            <li class="basket__item">
+              <p class="basket__item-name">Название товара: </p>
+              <p class="basket__item-cost">Стоимость: </p>
+            </li>
+            </ul>
+            <p class="basket__total">Итого </p>
+          
             </header>
             <main class="main">
                 <div class="slider"></div>
@@ -59,11 +76,7 @@
                     </div>
                 </div>
             </main>
-            <footer class="footer">
-                <h1 class="footer__title">Dev Dream Team: Анастасия, Андрей, Евгений, Елена, Наталья, Никита.</h1>
-            </footer>
-        </div>
-    </div>
-    <script src="./scripts/index.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
+
 </html>
