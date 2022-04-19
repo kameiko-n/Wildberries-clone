@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./scss/index.scss">
   <title>Wildberries-clone</title>
 </head>
@@ -33,18 +33,11 @@
                 </button>
         <button class="header__button">Корзина</button>
         <div class="basket">
-          <p class="basket__title">Корзина</p>
-          <button class="basket__button">Очистить корзину</button>
-          <ul class="basket__list">
-            <li class="basket__item">
-              <p class="basket__item-name">Название товара: </p>
-              <p class="basket__item-cost">Стоимость: </p>
-            </li>
-            <li class="basket__item">
-              <p class="basket__item-name">Название товара: </p>
-              <p class="basket__item-cost">Стоимость: </p>
-            </li>
-          </ul>
+          <div class="basket__header">
+            <p class="basket__title">Корзина</p>
+            <button class="basket__button">Очистить корзину</button>
+          </div>
+          <ul class="basket__list"></ul>
           <p class="basket__total">Итого </p>
         </div>
 
@@ -102,17 +95,18 @@
                 </a>
               </div>
             </div>
-                    </div>
-                </div>
-            </main>
-      
-            <footer class="footer">
-                <h1 class="footer__title">Dev Dream Team: Анастасия, Андрей, Евгений, Елена, Наталья, Никита.</h1>
-            </footer>
-       
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/slider.js"></script>
-    <script src="./scripts/search.js"></script>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <h1 class="footer__title">Dev Dream Team: Анастасия, Андрей, Евгений, Елена, Наталья, Никита.</h1>
+      </footer>
+
+      <script src="./scripts/index.js"></script>
+      <script src="./scripts/slider.js"></script>
+      <script src="./scripts/search.js"></script>
+      <script src="./scripts/basket.js"></script>
 </body>
 
 </html>
