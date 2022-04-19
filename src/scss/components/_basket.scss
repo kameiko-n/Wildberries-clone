@@ -30,6 +30,7 @@
     border: 2px solid #000;
   }
   &__list {
+    display: none;
     margin-bottom: 35px;
   }
   &__item {
@@ -39,7 +40,7 @@
     @include font ($medium, $sm, 1.5);
   }
   &__total {
-    display: flex;
+    display: none;
     justify-content: end;
     @include font ($medium, $lg, 1);
   }
