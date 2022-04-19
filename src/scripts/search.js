@@ -6,18 +6,17 @@ const logo = document.querySelector(".logo");
 
 
 header.addEventListener("click", () => {
-    if (event.target.closest(".header__search-sm-btn") || event.target.closest(".header__search-box.enabled")) {
-        logo.classList.add("disabled");
-        basketBtn.classList.add("disabled");
-        searchBox.classList.add("enabled");
-        searchBtn.classList.add("disabled");
-    } else {
-        logo.classList.remove("disabled");
-        basketBtn.classList.remove("disabled");
-        searchBox.classList.remove("enabled");
-        searchBtn.classList.remove("disabled");
-    }
 
 
+        if (event.target.closest(".header__search-sm-btn") || event.target.closest(".header__search-box.enabled")) {
+            logo.classList.add("disabled");
+            basketBtn.classList.add("disabled");
+            searchBox.classList.add("enabled");
+            searchBtn.classList.add("disabled");
+        } else  {
+            logo.classList.remove("disabled");
+            basketBtn.classList.remove("disabled");
+            searchBox.classList.remove("enabled");
+            searchBtn.classList.remove("disabled");
+        }
 })
-
