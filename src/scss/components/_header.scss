@@ -66,8 +66,8 @@
         align-items: center;
         margin: 0;
         padding: 5px;
-        width: 66px;
-        height: 66px;
+        width: 69px;
+        height: 69px;
         border-radius: 50%;
         outline: none;
         border: none;
@@ -123,6 +123,18 @@
             @include font($medium, $xs, $xs);
             background: url(../assets/basket.svg) top/50% no-repeat;
         }
+    }
+
+    .disabled {
+        display: none;
+    }
+
+    .enabled {
+        display: flex;
+    }
+
+    &__button:hover {
+        font-weight: bold;
     }
 
     &__basket {
