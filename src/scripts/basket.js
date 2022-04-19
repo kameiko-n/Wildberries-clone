@@ -71,7 +71,7 @@ const createProduct = (id, name, newPrice, oldPrice, imgSrc) => {
 
 const initBasket = () => {
   let sum = 0;
-  array.forEach(product => {
+  products.forEach(product => {
     basketList.append(createProduct(product.id, product.name, product.newPrice, product.oldPrice, product.imgSrc));
     sum += product.newPrice
   })
