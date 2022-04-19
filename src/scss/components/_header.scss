@@ -126,11 +126,15 @@
     }
 
     .disabled {
-        display: none;
+        @include sm {
+            display: none;
+        }
     }
 
     .enabled {
-        display: flex;
+        @include sm {
+            display: flex;
+        }
     }
 
     &__button:hover {

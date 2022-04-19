@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
@@ -40,36 +41,36 @@
           <ul class="basket__list"></ul>
           <p class="basket__total">Итого </p>
         </div>
-
-      </header>
-      <main class="main">
-        <div class="flex-wrapper">
-          <div class="slider-wrapper">
-            <div class="slide active">
-              <a href="#"><img src="/assets/slider_img/big_prices.jpg" alt="big_prices"></a>
-            </div>
-            <div class="slide">
-              <a href="#"><img src="/assets/slider_img/antilopa.jpg" alt="antilopa"></a>
-            </div>
-            <div class="slide">
-              <a href="#"><img src="/assets/slider_img/big_spring.jpg" alt="big_spring"></a>
-            </div>
-            <div class="slide">
-              <a href="#"><img src="/assets/slider_img/meine_liebe.png" alt="meine_liebe"></a>
-            </div>
-            <button class="slider__btn-left"><img class="arrow_left" src="/assets/slider_img/left_arrow_icon.svg"></button>
-            <button class="slider__btn-right"><img class="arrow_left" src="/assets/slider_img/right_arrow_icon.svg"></button>
-          </div>
-        </div>
-        <div class="container__dots">
-          <button class="slired__dot active"></button>
-          <button class="slired__dot"></button>
-          <button class="slired__dot"></button>
-          <button class="slired__dot"></button>
-        </div>
-        <h2 class="title">Хиты продаж</h2>
-        <div class="products">
-          <div class="card">
+      
+            </header>
+            <main class="main">
+                <div class="flex-wrapper">
+                    <div class="slider-wrapper">
+                        <div class="slide active">
+                            <a href="#"><img class="slider__img" src="/assets/slider_img/big_prices.jpg" alt="big_prices"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="#"><img class="slider__img" src="/assets/slider_img/antilopa.jpg" alt="antilopa"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="#"><img class="slider__img" src="/assets/slider_img/big_spring.jpg" alt="big_spring"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="#"><img class="slider__img" src="/assets/slider_img/meine_liebe.png" alt="meine_liebe"></a>
+                        </div>                           
+                        <button class="slider__btn-left"><img class="arrow_left" src="/assets/slider_img/left_arrow_icon.svg"></button>
+                        <button class="slider__btn-right"><img class="arrow_left" src="/assets/slider_img/right_arrow_icon.svg"></button>
+                    </div>
+                </div>
+                <div class="container__dots">
+                    <button class="slired__dot active"></button>
+                    <button class="slired__dot"></button>
+                    <button class="slired__dot"></button>
+                    <button class="slired__dot"></button>
+                </div>
+                <h2 class="title">Хиты продаж</h2>
+                <div class="products">
+                    <div class="card">
 
             <div class="card__content">
               <img src="./assets/card/pants.jpg" alt="Фото товара" class="card__photo">
@@ -95,18 +96,20 @@
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
+                    </div>
+                </div>
+            </main>
+      
+            <footer class="footer">
+                <h1 class="footer__title">Dev Dream Team: Анастасия, Андрей, Евгений, Елена, Наталья, Никита.</h1>
+            </footer>
+       
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src="./scripts/slider_adaptive.js"></script>
+    <script src="./scripts/search.js"></script>
+   <script src="./scripts/basket.js"></script>
 
-      <footer class="footer">
-        <h1 class="footer__title">Dev Dream Team: Анастасия, Андрей, Евгений, Елена, Наталья, Никита.</h1>
-      </footer>
-
-      <script src="./scripts/index.js"></script>
-      <script src="./scripts/slider.js"></script>
-      <script src="./scripts/search.js"></script>
-      <script src="./scripts/basket.js"></script>
 </body>
 
 </html>
