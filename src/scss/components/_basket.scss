@@ -1,14 +1,14 @@
 .basket {
   position: absolute;
-  top: 25%;
+  top: 100%;
   left: 0%;
   display: none;
   width: 100%;
-  padding: 15px 35px;
+  min-height: 80vh;
+  padding: 40px;
   background-color: #F9FAF0;
   border-radius: 25px;
-  border: 2px solid #000;
-  &--show {
+  &.show {
     display: block;
   }
   &__header {
@@ -24,23 +24,43 @@
     min-width: 30px;
     padding: 10px 10px;
     @include font ($medium, $sm, 1);
-    color: #000;
+    color: #fff;
     background-color: #C779EB;
     border-radius: 15px;
-    border: 2px solid #000;
   }
   &__list {
     margin-bottom: 35px;
   }
   &__item {
-    @include flex (row, space-between, null, null);
-    margin-bottom: 10px;
-    padding: 0px 80px 0px 50px;
+    @include flex (row, null, null, null);
+    padding: 25px 0;
     @include font ($medium, $sm, 1.5);
+    border-top: 1px solid #BEC1DA;
+  }
+  &__image {
+    width: 80px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  &__info {
+    @include flex (row, space-between, null, null);
+    width: 100%;
+  }
+  &__info-name {
+    @include font ($medium, $xs, 1.5);
+  }
+  &__info-new-cost {
+    margin-bottom: 10px;
+    @include font ($bold, $lg, 1);
+  }
+  &__info-old-cost {
+    @include font ($medium, $xs, 1);
+    text-decoration: line-through;
+    color: #8b8b8b;
   }
   &__total {
-    display: flex;
-    justify-content: end;
-    @include font ($medium, $lg, 1);
+    @include flex (row, end, null, null);
+    @include font ($bold, $lg, 1);
   }
 }
