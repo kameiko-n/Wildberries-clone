@@ -3,3 +3,6 @@ dist
 .cache
 .idea
 .prettierrc
+.DS_Store
+.gitignore
+popup.js
