@@ -71,7 +71,7 @@
         border-radius: 50%;
         outline: none;
         border: none;
-        background: none;
+        background: url(../assets/search_btn.svg) center/60% no-repeat;
         @include lg {
             width: 56px;
             height: 56px;
@@ -177,3 +177,4 @@
         }
     }
 }
+
