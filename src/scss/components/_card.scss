@@ -187,7 +187,9 @@
             top: 30px;
         }
     }
-    
-    .popup-close:hover {
-        background: #f8f8fa;
-    }
+.hide {
+    display: none;
+}
+.popup-close:hover {
+    background: #f8f8fa;
+}
