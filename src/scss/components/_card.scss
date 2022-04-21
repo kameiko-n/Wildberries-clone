@@ -193,3 +193,10 @@
 .popup-close:hover {
     background: #f8f8fa;
 }
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font ($medium, $lg, $xs)
+}
