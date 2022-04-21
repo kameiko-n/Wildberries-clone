@@ -2,41 +2,18 @@ const headerBtn = document.querySelector('.header__button');
 const basket = document.querySelector('.basket');
 const basketList = document.querySelector('.basket__list');
 const basketTotal = document.querySelector('.basket__total');
+const basketButton = document.querySelector('.basket__button');
 
-const products = [
+let products = [];
 
-  {
-    "id": 123456,
-    "name": "Штаны мужские1",
-    "oldPrice": 100,
-    "newPrice": 65,
-    "sale": 35,
-    "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfRvDfX9MQLgugkKX_g-Zvx4UpXlko3qpNmA&usqp=CAU"
-  },
+const productsFromStorage = JSON.parse(localStorage.getItem('products'));
 
-  {
-    "id": 122456,
-    "name": "Штаны мужские2",
-    "oldPrice": 100,
-    "newPrice": 85,
-    "sale": 15,
-    "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfRvDfX9MQLgugkKX_g-Zvx4UpXlko3qpNmA&usqp=CAU"
-  },
-
-  {
-    "id": 726456,
-    "name": "Штаны мужские3",
-    "oldPrice": 100,
-    "newPrice": 90,
-    "sale": 10,
-    "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfRvDfX9MQLgugkKX_g-Zvx4UpXlko3qpNmA&usqp=CAU"
-  }
-]
-const todosFromStorage = JSON.parse(localStorage.getItem('products'));
-
-const addProductToBasket = () => {
-  localStorage.setItem('products', JSON.stringify(todos));
+export const addProductToBasket = (product) => {
+  products.push(product);
+  basketList.append(createProduct(product.id, product.name, product.newPrice, product.oldPrice, product.imgSrc));
+  localStorage.setItem('products', JSON.stringify(products));
 }
+
 
 const createProduct = (id, name, newPrice, oldPrice, imgSrc) => {
   const basketItem = document.createElement('li');
@@ -71,14 +48,24 @@ const createProduct = (id, name, newPrice, oldPrice, imgSrc) => {
 
 const initBasket = () => {
   let sum = 0;
-  products.forEach(product => {
-    basketList.append(createProduct(product.id, product.name, product.newPrice, product.oldPrice, product.imgSrc));
-    sum += product.newPrice
-  })
-  basketTotal.innerText = `Итого ${sum} руб.`;
+  if ('products' in localStorage && productsFromStorage && productsFromStorage.length) {
+    productsFromStorage.forEach(product => {
+      basketList.append(createProduct(product.id, product.name, product.newPrice, product.oldPrice, product.imgSrc));
+      products.push(product);
+      sum += product.newPrice;
+    });
+    basketTotal.innerText = `Итого ${sum} руб.`;
+  }
 }
 
 headerBtn.addEventListener('click', () => {
   basket.classList.add('show');
   initBasket();
+})
+
+basketButton.addEventListener('click', () => {
+  basketList.innerHTML = '';
+  basketTotal.innerText = `В корзине пока ничего нет`;
+  products = [];
+  localStorage.setItem('products', JSON.stringify(products));
 })
