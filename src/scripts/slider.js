@@ -99,3 +99,6 @@ function handleTouchMove(event) {
     prevSlide();
   }
 };
+
+setInterval(nextSlide, 8000);
+
