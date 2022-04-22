@@ -1,13 +1,9 @@
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
     padding: 20px;
-    background: inherit;
 
     @include lg {
         height: 80px;
@@ -84,20 +80,24 @@
 
     &__search-sm-btn {
             display: none;
-            justify-content: center;
-            align-items: center;
             margin: 0 10px;
             padding: 5px;
-            width: 40px;
+            min-width: 40px;
             height: 40px;
             border-radius: 50%;
             outline: none;
-            border: 2px solid #e8e8e8b5;
-            background: inherit;
+            border: 3px solid #e8e8e8b5;
+            background: url(../assets/search_btn.svg) center/70% no-repeat;
 
         @include sm {
-            display: flex;
+            display: block;
         }
+
+    }
+
+    &__search-sm-btn:hover {
+        background: url(../assets/search_btn.svg) center/70% no-repeat, rgba(255, 255, 255, 0.17);
+        border: 2px solid #e8e8e8b5;
     }
     
     &__button {

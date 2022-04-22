@@ -81,10 +81,9 @@ header.addEventListener("click", () => {
         getProducts().then((products) => {
             let value = searchInput.value.toLowerCase().trim();
 
-            const newProducts = products.filter((product) => {
-                if (!(product.name.toLowerCase().search(value) === -1))
-                    return true;
-            });
+            let newProducts = products.filter((product) =>
+                product.name.toLowerCase().includes(value),
+            );
 
             if (value === "") {
                 return;
