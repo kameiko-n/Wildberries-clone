@@ -20,7 +20,16 @@ getProducts()
             const productSale = item.sale;
             const productImage = item.imgSrc;
 
-            let templete = `<div class="card" data-id="${productId}">
+            let templete = `<div class="card" id="${productId}">
+        
+                            <div class="card__content" id="cardContent">
+                                <img src="${productImage}" alt="${productName}" class="card__photo">
+                                <a href="#popup" class="card__fast-view" >Быстрый просмотр</a>
+                                <div class="card__bottom">
+                                    <p class="card__sale-value">${productSale}%</p>
+                                    <button class="card__add-in-basket-btn">${basketIcon}</button>
+                                </div>
+                            </div>
 
                             <div class="card__prices">
                                 <p class="card__new-price">${productNewPrice}р</p>
