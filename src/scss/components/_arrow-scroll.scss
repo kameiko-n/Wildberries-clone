@@ -1,0 +1,36 @@
+.button-scroll {
+    position: fixed;
+    display: none;
+    left: 15px;
+    top: 550px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.button-scroll:hover {
+    opacity: 0.85;
+}
+
+.scroll-up--active {
+    display: block;
+
+    @include lg {
+        display: none;
+      }
+    
+      @include md {
+        display: none;
+      }
+    
+      @include sm {
+        display: none;
+      }
+    
+      @include xs {
+        display: none;
+      }
+}
+
