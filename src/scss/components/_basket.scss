@@ -1,13 +1,16 @@
 .basket {
   position: absolute;
-  top: 100%;
+  top: 100px;
   left: 0%;
+  z-index: 2;
   display: none;
   width: 100%;
-  min-height: 80vh;
   padding: 40px;
   background-color: #F9FAF0;
   border-radius: 25px;
+  @include lg {
+    top: 80px;
+  }
   &.show {
     display: block;
   }
