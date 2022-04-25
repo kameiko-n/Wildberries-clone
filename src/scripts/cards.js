@@ -3,24 +3,24 @@ import { basketIcon, closeIcon } from "./variablesCardIcons.js";
 import { addProductToBasket } from "./basket.js";
 
 export const getProducts = () => {
-    return new Promise((resolve, reject) => {
-        fetch("https://625edd553b039517f1fdb9e1.mockapi.io/products")
-            .then((response) => response.json())
-            .then((users) => resolve(users));
-    });
+  return new Promise((resolve, reject) => {
+    fetch("https://625edd553b039517f1fdb9e1.mockapi.io/products")
+      .then((response) => response.json())
+      .then((users) => resolve(users));
+  });
 };
 
 getProducts()
-    .then((products) => {
-        products.forEach((item) => {
-            const productId = item.id;
-            const productName = item.name;
-            const productOldPrice = item.oldPrice;
-            const productNewPrice = item.newPrice;
-            const productSale = item.sale;
-            const productImage = item.imgSrc;
+  .then((products) => {
+    products.forEach((item) => {
+      const productId = item.id;
+      const productName = item.name;
+      const productOldPrice = item.oldPrice;
+      const productNewPrice = item.newPrice;
+      const productSale = item.sale;
+      const productImage = item.imgSrc;
 
-            let templete = `<div class="card" id="${productId}">
+      let templete = `<div class="card" data-id="${productId}">
         
                             <div class="card__content" id="cardContent">
                                 <img src="${productImage}" alt="${productName}" class="card__photo">
@@ -44,16 +44,16 @@ getProducts()
                                 </div>
                             </div>
                         </div>`;
-            productsItems.insertAdjacentHTML("beforeend", templete);
-        });
-        return products;
-    })
-    .then((products) => {
-        document.querySelectorAll(".card__add-in-basket-btn").forEach((btn) => {
-            btn.addEventListener("click", (event) => {
-                const id = event.target.closest(".card").dataset.id;
-                const product = products.find((elem) => elem.id === id);
-                addProductToBasket(product);
-            });
-        });
+      productsItems.insertAdjacentHTML("beforeend", templete);
     });
+    return products;
+  })
+  .then((products) => {
+    document.querySelectorAll(".card__add-in-basket-btn").forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        const id = event.target.closest(".card").dataset.id;
+        const product = products.find((elem) => elem.id === id);
+        addProductToBasket(product);
+      });
+    });
+  });

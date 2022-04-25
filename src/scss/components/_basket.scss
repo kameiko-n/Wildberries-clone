@@ -14,6 +14,11 @@
   &.show {
     display: block;
   }
+  // &.empty {
+  //   .basket__list {
+  //     height: 10vh;
+  //   }
+  // }
   &__header {
     @include flex (row, space-between, null, null);
     margin-bottom: 30px;
@@ -23,7 +28,7 @@
     font-size: 24px;
     color: #000;
   }
-  &__button {
+  &__delete {
     min-width: 30px;
     padding: 10px 10px;
     @include font ($medium, $sm, 1);
@@ -33,10 +38,20 @@
   }
   &__list {
     margin-bottom: 35px;
+    height: 55vh;
+    overflow: auto;
+    max-height: 55vh;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 15px;
+      background-color: #8b8b8b;
+    }
   }
   &__item {
     @include flex (row, null, null, null);
-    padding: 25px 0;
+    padding: 25px 15px 25px 0;
     @include font ($medium, $sm, 1.5);
     border-top: 1px solid #BEC1DA;
   }
@@ -45,6 +60,7 @@
     height: 100px;
     margin-right: 20px;
     border-radius: 5px;
+    object-fit: cover;
   }
   &__info {
     @include flex (row, space-between, null, null);
@@ -58,12 +74,55 @@
     @include font ($bold, $lg, 1);
   }
   &__info-old-cost {
+    margin-bottom: 20px;
     @include font ($medium, $xs, 1);
     text-decoration: line-through;
     color: #8b8b8b;
   }
+  &__info-delete {
+    @include font ($medium, $xs, 1);
+    color: #8b8b8b;
+    background: none;
+  }
   &__total {
     @include flex (row, end, null, null);
     @include font ($bold, $lg, 1);
+  }
+}
+
+.product__count {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  @include font ($regular, $xxs, 20px);
+  color: #fff;
+  background-color: crimson;
+  border-radius: 50%;
+  &.hide {
+    display: none;
+  }
+}
+
+.message {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  width: max-content;
+  height: 50px;
+  padding: 0px 20px;
+  @include font ($medium, $sm, 50px);
+  color: #000;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 2px solid #C779EB;
+  text-align: center;
+  transition: top .8s ease-out;
+  &.show {
+    top: 25%;
+    // transition: top .5s ease-in-out;
   }
 }
