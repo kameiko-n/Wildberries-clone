@@ -1,5 +1,5 @@
 const productsItems = document.getElementById("products");
-import { basketIcon, closeIcon } from "./variablesCardIcons.js";
+import { basketIconPlus, basketIconCheck, closeIcon } from "./variablesCardIcons.js";
 import { addProductToBasket } from "./basket.js";
 
 export const getProducts = () => {
@@ -27,7 +27,7 @@ getProducts()
                                 <a href="#popup" class="card__fast-view" >Быстрый просмотр</a>
                                 <div class="card__bottom">
                                     <p class="card__sale-value">${productSale}%</p>
-                                    <button class="card__add-in-basket-btn">${basketIcon}</button>
+                                    <button class="card__add-in-basket-btn">${basketIconPlus}</button>
                                 </div>
                             </div>
 
@@ -54,6 +54,9 @@ getProducts()
         const id = event.target.closest(".card").dataset.id;
         const product = products.find((elem) => elem.id === id);
         addProductToBasket(product);
+
+        btn.innerHTML = `${basketIconCheck}`;
+        btn.className = "card__add-in-basket-btn-disable";
       });
     });
   });

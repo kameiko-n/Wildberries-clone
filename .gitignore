@@ -5,4 +5,3 @@ dist
 .prettierrc
 .DS_Store
 .gitignore
-popup.js
