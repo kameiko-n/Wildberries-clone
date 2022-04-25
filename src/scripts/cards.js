@@ -59,4 +59,15 @@ getProducts()
         btn.className = "card__add-in-basket-btn-disable";
       });
     });
-  });
+  })
+  // .then((cards) => {
+  //   document.querySelectorAll(".card__fast-view").forEach((btn) => {
+  //     btn.addEventListener("click", (event) => {
+  //       const popup = document.querySelector(".popup");
+  //       popup.classList = "open";
+
+
+        
+  //     })
+  //   })
+  // })
