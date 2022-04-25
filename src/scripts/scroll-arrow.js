@@ -1,5 +1,5 @@
 const offset = 500;
-const buttonArrow = document.querySelector(".button-scroll");
+export const buttonArrow = document.querySelector(".button-scroll");
 
 const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
 

@@ -14,7 +14,7 @@
     z-index: 10;
 }
 
-.popup-body   {
+.popup-body{
     width: 70vh;
     height: 90vh;
     padding: 30px;
@@ -74,4 +74,8 @@
 
 .popup-close:hover {
     background: #f8f8fa;
+}
+
+.hiddenButtonArrow {
+    visibility: hidden;
 }
