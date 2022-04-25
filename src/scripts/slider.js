@@ -66,7 +66,7 @@ sliderBlock.addEventListener("touchstart", handleTouchStart, false);
 sliderBlock.addEventListener("touchmove", handleTouchMove, false);
 
 // Interval Slider
-setInterval(nextSlide, 4000);
+setInterval(nextSlide, 8000);
 
 // Swipe Slider
 function handleTouchStart(event) {
