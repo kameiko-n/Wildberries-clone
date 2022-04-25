@@ -1,179 +1,163 @@
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 20px;
+  @include lg {
+    height: 80px;
+    padding: 20px;
+  }
+  &__search-box {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    padding: 20px;
-    background: inherit;
-
+    margin: 0 10px;
+    padding: 0;
+    width: 900px;
+    height: 70px;
+    border: none;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.23);
     @include lg {
-        height: 80px;
-        padding: 20px;
-    }
-
-    &__search-box {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 10px;
-        padding: 0;
-        width: 900px;
-        height: 70px;
-        border: none;
-        border-radius: 40px;
-        background: rgba(255, 255, 255, 0.23);
-        @include lg {
-            height: 60px;
-        }
-        @include md {
-            height: 40px;
-        }
-        @include sm {
-            display: none;
-        }
-    }
-
-    &__search-box:hover {
-        background: rgba(255, 255, 255, 0.33);
-    }
-
-    &__search-text {
-        flex-grow: 1;
-        margin: 0 10px;
-        padding: 0 15px;
-        text-align: justify;
-        font-size: $lg;
-        border: none;
-        outline: none;
-        background: none;
-        @include lg {
-            font-size: $md;
-        }
-        @include md {
-            font-size: $xs;
-        }
-    }
-
-    &__search-text::placeholder {
-        color: rgba(255, 255, 255, 0.58);
-    }
-
-    &__search-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding: 5px;
-        width: 69px;
-        height: 69px;
-        border-radius: 50%;
-        outline: none;
-        border: none;
-        background: url(../assets/search_btn.svg) center/60% no-repeat;
-        @include lg {
-            width: 56px;
-            height: 56px;
-        }
-        @include md {
-            width: 36px;
-            height: 36px;
-        }
-    }
-
-    &__search-sm-btn {
-            display: none;
-            justify-content: center;
-            align-items: center;
-            margin: 0 10px;
-            padding: 5px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            outline: none;
-            border: 2px solid #e8e8e8b5;
-            background: inherit;
-
-        @include sm {
-            display: flex;
-        }
-    }
-    
-    &__button {
-        display: flex;
-        justify-content: center;
-        align-items: end;
-        width: 100px;
-        height: 80px;
-        text-align: center;
-        @include font($medium, $sm, $sm);
-        color: rgba(232, 232, 232, 0.71);
-        background: url(../assets/basket.svg) top/60% no-repeat;
-        border: none;
-        @include lg {
-            width: 80px;
-            height: 60px;
-            background: url(../assets/basket.svg) top/50% no-repeat;
-        }
-        @include md {
-            margin-left: 10px;
-            width: 60px;
-            height: 50px;
-            @include font($medium, $xs, $xs);
-            background: url(../assets/basket.svg) top/50% no-repeat;
-        }
-    }
-
-    .disabled {
-        @include sm {
-            display: none;
-        }
-    }
-
-    .enabled {
-        @include sm {
-            display: flex;
-        }
-    }
-
-    &__button:hover {
-        font-weight: bold;
-    }
-
-    &__basket {
-        display: none;
-    }
-}
-.logo {
-    min-width: 200px;
-    @include flex (row, space-between, center, nowrap);
-    @include lg {
-        min-width: 150px;
+      height: 60px;
     }
     @include md {
-        flex-grow: 1;
-        @include flex (row, start, center, nowrap);
-        min-width: 130px;
+      height: 40px;
     }
-
-
-    &__img {
-        width: 80px;
-        margin-right: 10px;
-        @include lg {
-            width: 60px;
-        }
-        @include md {
-            height: 50px;
-        }
+    @include sm {
+      display: none;
     }
-
-    &__name {
-        @include font($bold, $xxl, $xl);
-        color: rgba(232, 232, 232, 0.71);
-        @include lg {
-            @include font($bold, $lg, $md);
-        }
+  }
+  &__search-box:hover {
+    background: rgba(255, 255, 255, 0.33);
+  }
+  &__search-text {
+    flex-grow: 1;
+    margin: 0 10px;
+    padding: 0 15px;
+    text-align: justify;
+    font-size: $lg;
+    border: none;
+    outline: none;
+    background: none;
+    @include lg {
+      font-size: $md;
     }
+    @include md {
+      font-size: $xs;
+    }
+  }
+  &__search-text::placeholder {
+    color: rgba(255, 255, 255, 0.58);
+  }
+  &__search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 5px;
+    width: 69px;
+    height: 69px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background: url(../assets/search_btn.svg) center/60% no-repeat;
+    @include lg {
+      width: 56px;
+      height: 56px;
+    }
+    @include md {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  &__search-sm-btn {
+    display: none;
+    margin: 0 10px;
+    padding: 5px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: none;
+    border: 3px solid #e8e8e8b5;
+    background: url(../assets/search_btn.svg) center/70% no-repeat;
+    @include sm {
+      display: block;
+    }
+  }
+  &__search-sm-btn:hover {
+    background: url(../assets/search_btn.svg) center/70% no-repeat, rgba(255, 255, 255, 0.17);
+    border: 2px solid #e8e8e8b5;
+  }
+  &__button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    @include font($medium, $sm, $sm);
+    color: rgba(232, 232, 232, 0.71);
+    background: url(../assets/basket.svg) top/60% no-repeat;
+    border: none;
+    @include lg {
+      width: 80px;
+      height: 60px;
+      background: url(../assets/basket.svg) top/50% no-repeat;
+    }
+    @include md {
+      margin-left: 10px;
+      width: 60px;
+      height: 50px;
+      @include font($medium, $xs, $xs);
+      background: url(../assets/basket.svg) top/50% no-repeat;
+    }
+  }
+  .disabled {
+    @include sm {
+      display: none;
+    }
+  }
+  .enabled {
+    @include sm {
+      display: flex;
+    }
+  }
+  &__button:hover {
+    font-weight: bold;
+  }
+  &__basket {
+    display: none;
+  }
+}
+
+.logo {
+  min-width: 200px;
+  @include flex (row, space-between, center, nowrap);
+  @include lg {
+    min-width: 150px;
+  }
+  @include md {
+    flex-grow: 1;
+    @include flex (row, start, center, nowrap);
+    min-width: 130px;
+  }
+  &__img {
+    width: 80px;
+    margin-right: 10px;
+    @include lg {
+      width: 60px;
+    }
+    @include md {
+      height: 50px;
+    }
+  }
+  &__name {
+    @include font($bold, $xxl, $xl);
+    color: rgba(232, 232, 232, 0.71);
+    @include lg {
+      @include font($bold, $lg, $md);
+    }
+  }
 }
