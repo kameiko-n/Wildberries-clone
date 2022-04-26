@@ -1,4 +1,4 @@
-import { basketIcon, closeIcon } from "./variablesCardIcons.js";
+import { basketIconPlus, closeIcon } from "./variablesCardIcons.js";
 
 const header = document.querySelector(".header");
 const searchBtn = document.querySelector(".header__search-sm-btn");
@@ -25,7 +25,7 @@ const addProductsCard = (products) => {
                         <div class="card__bottom">
                             <p class="card__sale-value">${productSale}%</p>
                             <button class="card__add-in-basket-btn">
-                                ${basketIcon}
+                                ${basketIconPlus}
                             </button>
                         </div>
                         </div>
