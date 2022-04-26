@@ -1,7 +1,9 @@
 const productsItems = document.getElementById("products");
 import { basketIconPlus, basketIconCheck, closeIcon } from "./variablesCardIcons.js";
+import { basketOutput } from "./basket.js";
 import { addProductToBasket } from "./basket.js";
 import { buttonArrow } from "./scroll-arrow.js";
+
 
 export const getProducts = () => {
   return new Promise((resolve, reject) => {
@@ -54,7 +56,7 @@ getProducts()
       btn.addEventListener("click", (event) => {
         const id = event.target.closest(".card").dataset.id;
         const product = products.find((elem) => elem.id === id);
-        addProductToBasket(product);
+        basketOutput.addProduct(product);
 
         btn.innerHTML = `${basketIconCheck}`;
         btn.className = "card__add-in-basket-btn-disable";
