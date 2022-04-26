@@ -14,7 +14,7 @@
     z-index: 10;
 }
 
-.popup-body   {
+.popup-body{
     width: 70vh;
     height: 90vh;
     padding: 30px;
@@ -29,11 +29,20 @@
     overflow: hidden;
 }
 
-.popup:target {
+.open {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
     opacity: 1;
     visibility: visible;
+
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    transition: all 0.8s ease 0s;
     z-index: 20;
-    transition: all 1s ease 0s;
 }
 
 .popup-photo {
@@ -65,4 +74,8 @@
 
 .popup-close:hover {
     background: #f8f8fa;
+}
+
+.hiddenButtonArrow {
+    visibility: hidden;
 }
