@@ -138,3 +138,10 @@
         @include font($medium, $lg, $lg);
     }
 }
+
+.not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include font($medium, $lg, 3)
+}
