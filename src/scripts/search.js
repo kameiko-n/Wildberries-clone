@@ -90,6 +90,7 @@ header.addEventListener("click", () => {
                 productsBox.innerText = "Товаров не найдено";
             } else {
                 productsBox.innerHTML = "";
+                productsBox.classList.remove("not-found");
                 addProductsCard(newProducts);
             }
             searchInput.value = "";
