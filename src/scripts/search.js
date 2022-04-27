@@ -94,7 +94,6 @@ header.addEventListener("click", () => {
             }
             searchInput.value = "";
             mainTitle.remove();
-            console.log(document.querySelectorAll(".card__add-in-basket-btn"))
             document.querySelectorAll(".card__add-in-basket-btn").forEach((btn) => {
                 btn.addEventListener("click", (event) => {
                     console.log(event.target.className)
