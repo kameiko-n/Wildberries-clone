@@ -7,6 +7,7 @@ const searchInput = document.querySelector(".header__search-text");
 const basketBtn = document.querySelector(".header__button");
 const logo = document.querySelector(".logo");
 const productsBox = document.querySelector(".products");
+const mainTitle = document.querySelector(".title")
 
 const addProductsCard = (products) => {
     products.forEach((item) => {
@@ -96,6 +97,7 @@ header.addEventListener("click", () => {
                 addProductsCard(newProducts);
             }
             searchInput.value = "";
+            mainTitle.remove();
         });
     }
 });
