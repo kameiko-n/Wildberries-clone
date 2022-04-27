@@ -71,7 +71,7 @@ getProducts()
         popup.classList.add("open");
         document.body.style.overflow = 'hidden';
         buttonArrow.classList.add("hiddenButtonArrow");
-        
+
         const close = popup.querySelector(".popup-close");
         close.addEventListener("click", (event) => {
           event.preventDefault();

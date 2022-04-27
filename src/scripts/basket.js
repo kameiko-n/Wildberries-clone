@@ -129,6 +129,12 @@ const basketObject = {
 
 export const basketOutput = {
   init: () => {
+    const productsFromStorage = JSON.parse(localStorage.getItem('products'));
+
+    if (!('products' in localStorage) && !productsFromStorage) {
+      localStorage.setItem('products', JSON.stringify(products));
+    }
+
     const message = document.createElement('div');
     const productCount = document.createElement('p');
 
