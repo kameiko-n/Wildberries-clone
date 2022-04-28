@@ -1,9 +1,4 @@
-const body = document.querySelector('body');
-const headerBtn = document.querySelector('.header__button');
-const basket = document.querySelector('.basket');
-const basketList = document.querySelector('.basket__list');
-const basketTotal = document.querySelector('.basket__total');
-const basketDelete = document.querySelector('.basket__delete');
+import {body, basketBtn, basketTotal, basketList, basketDelete, basket} from "./variables.js";
 
 let products = [];
 let sum = 0;
@@ -105,15 +100,12 @@ const basketObject = {
       })
       basketTotal.innerText = `Итого ${sum} руб.`;
     }
-    //  else {
-    //   basket.classList.add('empty');
-    // }
 
     basket.classList.add('show');
   },
 
   initListeners: () => {
-    headerBtn.addEventListener('click', () => {
+    basketBtn.addEventListener('click', () => {
       basketObject.initBasket();
     })
 
@@ -143,7 +135,7 @@ export const basketOutput = {
     message.innerText = 'Товар успешно добавлен в корзину';
 
     body.append(message);
-    headerBtn.append(productCount);
+    basketBtn.append(productCount);
 
     basketObject.initListeners();
     basketObject.showProductCount();
