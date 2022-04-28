@@ -100,5 +100,3 @@ function handleTouchMove(event) {
     }
 }
 
-setInterval(nextSlide, 8000);
-
