@@ -1,12 +1,12 @@
 const imagesSlider = document.querySelectorAll(
-    ".flex-wrapper, .slider-wrapper, .slider__img",
+    ".flex-wrapper, .slider, .slider__img",
 );
-const sliderLine = document.querySelector(".slider-wrapper");
+const sliderLine = document.querySelector(".slider");
 let count = 0;
 let width;
 
 const resizeSlider = () => {
-    width = document.querySelector(".slider-wrapper").offsetWidth;
+    width = document.querySelector(".slider").offsetWidth;
     sliderLine.style.width = width * imagesSlider.length + "px";
     imagesSlider.forEach((item) => {
         item.style.width = width + "px";
