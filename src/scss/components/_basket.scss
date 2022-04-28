@@ -27,6 +27,9 @@
     @include font ($bold, $lg, 1);
     font-size: 24px;
     color: #000;
+    @include sm {
+      @include font ($bold, $md, 1);
+    }
   }
   &__delete {
     min-width: 30px;
@@ -35,6 +38,11 @@
     color: #fff;
     background-color: #C779EB;
     border-radius: 15px;
+    @include sm {
+      min-width: 20px;
+      padding: 2x 2px;
+      @include font ($regular, $xs, 1);
+    }
   }
   &__list {
     margin-bottom: 35px;
@@ -61,10 +69,18 @@
     margin-right: 20px;
     border-radius: 5px;
     object-fit: cover;
+    @include sm {
+      width: 60px;
+      height: 80px;
+      margin-right: 40px;
+    }
   }
   &__info {
     @include flex (row, space-between, null, null);
     width: 100%;
+    @include sm {
+      @include flex (column, null, null, null);
+    }
   }
   &__info-name {
     @include font ($medium, $xs, 1.5);
@@ -72,6 +88,12 @@
   &__info-new-cost {
     margin-bottom: 10px;
     @include font ($bold, $lg, 1);
+    @include md {
+      @include font ($bold, $md, 1);
+    }
+    @include sm {
+      @include font ($bold, $sm, 1);
+    }
   }
   &__info-old-cost {
     margin-bottom: 20px;
@@ -87,6 +109,12 @@
   &__total {
     @include flex (row, end, null, null);
     @include font ($bold, $lg, 1);
+    @include md {
+      @include font ($bold, $md, 1);
+    }
+    @include sm {
+      @include font ($bold, $sm, 1);
+    }
   }
 }
 
