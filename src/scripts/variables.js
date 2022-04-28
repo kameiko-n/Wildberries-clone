@@ -13,6 +13,9 @@ export const basketBtn = document.querySelector(".header__button");
 export const logo = document.querySelector(".logo");
 export const productsBox = document.querySelector(".products");
 export const mainTitle = document.querySelector(".title");
+export const buttonArrow = document.querySelector(".button-scroll");
+export const imagesSlider = document.querySelectorAll(".flex-wrapper, .slider, .slider__img",);
+export const sliderLine = document.querySelector(".slider");
 //cards
 export let basketIconPlus = `<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
 <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>

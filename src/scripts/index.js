@@ -8,10 +8,27 @@ import {
     searchBox,
     searchBtn,
     searchInput,
+    buttonArrow,
+    imagesSlider,
+    sliderLine,
 } from "./variables.js";
-import { buttonArrow } from "./scroll-arrow.js";
 import { addProductCard, getProducts } from "./add_product_card.js";
 import { addProductToBasket, initListeners, showProductCount } from "./basket.js";
+
+// VARIABLES
+const offset = 500;
+let width;
+
+const resizeSlider = () => {
+    width = document.querySelector(".slider").offsetWidth;
+    sliderLine.style.width = width * imagesSlider.length + "px";
+    imagesSlider.forEach((item) => {
+        item.style.width = width + "px";
+        item.style.height = "auto";
+    });
+};
+
+const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
 
 const addInBasketBtn = (products) => {
     document.querySelectorAll(".card__add-in-basket-btn").forEach((btn) => {
@@ -125,3 +142,24 @@ header.addEventListener("click", () => {
         })
     }
 });
+
+// SCROLL ARROW
+window.addEventListener("scroll", () => {
+
+    if (getTop() > offset) {
+        buttonArrow.classList.add("scroll-up--active");
+    } else {
+        buttonArrow.classList.remove("scroll-up--active")
+    }
+})
+
+buttonArrow.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+// SLIDER ADAPTIVE
+window.addEventListener("resize", resizeSlider);
+resizeSlider();
