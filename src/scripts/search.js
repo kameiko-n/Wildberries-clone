@@ -1,4 +1,5 @@
-import { basketIconPlus, closeIcon } from "./variablesCardIcons.js";
+import { basketIconCheck, basketIconPlus, closeIcon } from "./variablesCardIcons.js";
+import { basketOutput } from "./basket";
 
 const header = document.querySelector(".header");
 const searchBtn = document.querySelector(".header__search-sm-btn");
@@ -18,34 +19,29 @@ const addProductsCard = (products) => {
         const productSale = item.sale;
         const productImage = item.imgSrc;
 
-        let templete = `<div class="card" id="${productId}">
+        let templete = `<div class="card" data-id="${productId}">
+        
+                            <div class="card__content" id="cardContent">
+                                <img src="${productImage}" alt="${productName}" class="card__photo">
+                                <a href="#popup" class="card__fast-view" >Быстрый просмотр</a>
+                                <div class="card__bottom">
+                                    <p class="card__sale-value">${productSale}%</p>
+                                    <button class="card__add-in-basket-btn">${basketIconPlus}</button>
+                                </div>
+                            </div>
 
-                        <div class="card__content">
-                        <img src="${productImage}" alt="${productName}" class="card__photo">
-                        <a href="#popup" class="card__fast-view popup__link">Быстрый просмотр</a>
-                        <div class="card__bottom">
-                            <p class="card__sale-value">${productSale}%</p>
-                            <button class="card__add-in-basket-btn">
-                                ${basketIconPlus}
-                            </button>
-                        </div>
-                        </div>
+                            <div class="card__prices">
+                                <p class="card__new-price">${productNewPrice}р</p>
+                                <p class="card__old-price">${productOldPrice}р</p>
+                            </div>
+                            <h3 class="card__title">${productName}</h3>
 
-                        <div class="card__prices">
-                        <p class="card__new-price">${productNewPrice}р</p>
-                        <p class="card__old-price">${productOldPrice}р</p>
-                        </div>
-                        <h3 class="card__title">${productName}</h3>
-
-                        <div id="popup" class="popup">
-                        <div class="popup-body">
-
-                                <img src="${productImage}" alt="${productName}" class="popup-photo">
-                                <a href="/" class="popup-close close-popup">
-                                ${closeIcon}
-                                </a>
-
-                        </div>
+                            <div id="popup" class="popup">
+                                <div class="popup-body">
+                                    <img src="${productImage}" alt="${productName}" class="popup-photo">
+                                    <a href="#" class="popup-close">${closeIcon}</a>
+                                </div>
+                            </div>
                         </div>`;
         productsBox.insertAdjacentHTML("beforeend", templete);
     });
@@ -94,10 +90,22 @@ header.addEventListener("click", () => {
                 productsBox.innerText = "Товаров не найдено";
             } else {
                 productsBox.innerHTML = "";
+                productsBox.classList.remove("not-found");
                 addProductsCard(newProducts);
             }
             searchInput.value = "";
             mainTitle.remove();
-        });
+            document.querySelectorAll(".card__add-in-basket-btn").forEach((btn) => {
+                btn.addEventListener("click", (event) => {
+                    console.log(event.target.className)
+                    const id = event.target.closest(".card").dataset.id;
+                    const product = products.find((elem) => elem.id === id);
+                    basketOutput.addProduct(product);
+
+                    btn.innerHTML = `${basketIconCheck}`;
+                    btn.className = "card__add-in-basket-btn-disable";
+                });
+            });
+        })
     }
 });
