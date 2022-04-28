@@ -1,14 +1,7 @@
 import { basketIconCheck, basketIconPlus, closeIcon } from "./variablesCardIcons.js";
-import { basketOutput } from "./basket";
+import { basketOutput } from "./basket.js";
+import { header, searchBtn, searchBox, searchInput, basketBtn, logo, productsBox, mainTitle} from "./variables.js";
 
-const header = document.querySelector(".header");
-const searchBtn = document.querySelector(".header__search-sm-btn");
-const searchBox = document.querySelector(".header__search-box");
-const searchInput = document.querySelector(".header__search-text");
-const basketBtn = document.querySelector(".header__button");
-const logo = document.querySelector(".logo");
-const productsBox = document.querySelector(".products");
-const mainTitle = document.querySelector(".title")
 
 const addProductsCard = (products) => {
     products.forEach((item) => {

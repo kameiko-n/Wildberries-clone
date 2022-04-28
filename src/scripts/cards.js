@@ -1,7 +1,6 @@
-const productsItems = document.getElementById("products");
+import {productsItems} from "./variables.js";
 import { basketIconPlus, basketIconCheck, closeIcon } from "./variablesCardIcons.js";
 import { basketOutput } from "./basket.js";
-import { addProductToBasket } from "./basket.js";
 import { buttonArrow } from "./scroll-arrow.js";
 
 
