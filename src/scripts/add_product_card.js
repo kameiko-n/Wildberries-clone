@@ -8,7 +8,7 @@ export const getProducts = () => {
     });
 };
 
-export const addProductsCard = (products) => {
+export const addProductCard = (products) => {
     products.forEach((item) => {
         const productId = item.id;
         const productName = item.name;

@@ -3,7 +3,7 @@ import { body, basketBtn, basketTotal, basketList, basketDelete, basket } from "
 let products = [];
 let sum = 0;
 
-const showProductCount = () => {
+export const showProductCount = () => {
     const products = JSON.parse(localStorage.getItem("products"));
     const productCount = document.querySelector(".product__count");
 
@@ -15,7 +15,7 @@ const showProductCount = () => {
     }
 };
 
-const addProductToBasket = (product) => {
+export const addProductToBasket = (product) => {
     const products = JSON.parse(localStorage.getItem("products"));
     const find = products.find((item) => item.id === product.id);
     const message = document.querySelector(".message");
@@ -35,7 +35,7 @@ const addProductToBasket = (product) => {
     showProductCount();
 };
 
-const createProduct = (id, name, newPrice, oldPrice, imgSrc) => {
+export const createProduct = (id, name, newPrice, oldPrice, imgSrc) => {
     const basketItem = document.createElement("li");
     const image = document.createElement("img");
     const productInfo = document.createElement("div");
@@ -85,7 +85,7 @@ const createProduct = (id, name, newPrice, oldPrice, imgSrc) => {
     return basketItem;
 };
 
-const initBasket = () => {
+export const initBasket = () => {
     body.style.overflow = "hidden";
     sum = 0;
     const productsFromStorage = JSON.parse(localStorage.getItem("products"));
@@ -116,7 +116,7 @@ const initBasket = () => {
     basket.classList.add("show");
 };
 
- const initListeners = () => {
+export const initListeners = () => {
     basketBtn.addEventListener("click", () => {
         initBasket();
     });
@@ -130,30 +130,4 @@ const initBasket = () => {
     });
 };
 
-export const basketOutput = {
-    init: () => {
-        const productsFromStorage = JSON.parse(
-            localStorage.getItem("products"),
-        );
 
-        if (!("products" in localStorage) && !productsFromStorage) {
-            localStorage.setItem("products", JSON.stringify(products));
-        }
-
-        const message = document.createElement("div");
-        const productCount = document.createElement("p");
-
-        message.className = "message";
-        productCount.className = "product__count";
-        message.innerText = "Товар успешно добавлен в корзину";
-
-        body.append(message);
-        basketBtn.append(productCount);
-
-        initListeners();
-        showProductCount();
-    },
-    addProduct: (product) => {
-        addProductToBasket(product);
-    },
-};
