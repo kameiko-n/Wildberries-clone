@@ -3,7 +3,8 @@ import {
     basketIconCheck,
     body,
     header,
-    logo, mainTitle,
+    logo,
+    mainTitle,
     productsBox,
     searchBox,
     searchBtn,
@@ -13,7 +14,11 @@ import {
     sliderLine,
 } from "./variables.js";
 import { addProductCard, getProducts } from "./add_product_card.js";
-import { addProductToBasket, initListeners, showProductCount } from "./basket.js";
+import {
+    addProductToBasket,
+    initListeners,
+    showProductCount,
+} from "./basket.js";
 
 // VARIABLES
 const offset = 500;
@@ -41,7 +46,7 @@ const addInBasketBtn = (products) => {
             btn.className = "card__add-in-basket-btn-disable";
         });
     });
-}
+};
 
 // BASKET
 const basketOutput = {
@@ -82,21 +87,23 @@ getProducts()
         document.querySelectorAll(".card__fast-view").forEach((btn) => {
             btn.addEventListener("click", (event) => {
                 event.preventDefault();
-                const popup = event.target.closest(".card").querySelector(".popup");
+                const popup = event.target
+                    .closest(".card")
+                    .querySelector(".popup");
                 popup.classList.add("open");
-                document.body.style.overflow = 'hidden';
+                document.body.style.overflow = "hidden";
                 buttonArrow.classList.add("hiddenButtonArrow");
 
                 const close = popup.querySelector(".popup-close");
                 close.addEventListener("click", (event) => {
                     event.preventDefault();
                     popup.classList.remove("open");
-                    document.body.style.overflow = 'auto';
+                    document.body.style.overflow = "auto";
                     buttonArrow.classList.remove("hiddenButtonArrow");
-                })
-            })
-        })
-    })
+                });
+            });
+        });
+    });
 
 // SEARCH
 header.addEventListener("click", () => {
@@ -138,25 +145,24 @@ header.addEventListener("click", () => {
             }
             searchInput.value = "";
             mainTitle.remove();
-            addInBasketBtn(products)
-        })
+            addInBasketBtn(products);
+        });
     }
 });
 
 // SCROLL ARROW
 window.addEventListener("scroll", () => {
-
     if (getTop() > offset) {
         buttonArrow.classList.add("scroll-up--active");
     } else {
-        buttonArrow.classList.remove("scroll-up--active")
+        buttonArrow.classList.remove("scroll-up--active");
     }
-})
+});
 
 buttonArrow.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "smooth",
     });
 });
 
